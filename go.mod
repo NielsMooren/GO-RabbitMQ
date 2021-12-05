@@ -1,5 +1,9 @@
-module GO-RabbitMQ
+module github.com/NielsBattle/GO-RabbitMQ
 
 go 1.17
 
-require github.com/Azure/go-amqp v0.16.4
+require (
+	github.com/joho/godotenv v1.4.0
+	github.com/julienschmidt/httprouter v1.3.0
+	github.com/streadway/amqp v1.0.0
+)
