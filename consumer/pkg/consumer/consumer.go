@@ -4,10 +4,11 @@ import (
 	"fmt"
 	"github.com/streadway/amqp"
 	"log"
+	"net/http"
 	"os"
 )
 
-func Consume() {
+func Consume(writer http.ResponseWriter) {
 	var rabbitHost = os.Getenv("RABBIT_HOST")
 	var rabbitPort = os.Getenv("RABBIT_PORT")
 	var rabbitUser = os.Getenv("RABBIT_USERNAME")
@@ -24,7 +25,7 @@ func Consume() {
 
 	q, err := ch.QueueDeclare(
 		"test-queue",
-		false,
+		true,
 		false,
 		false,
 		false,

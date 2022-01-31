@@ -1,4 +1,4 @@
-module github.com/NielsBattle/GO-RabbitMQ
+module github.com/NielsBattle/GO-RabbitMQ/publisher
 
 go 1.17
 
